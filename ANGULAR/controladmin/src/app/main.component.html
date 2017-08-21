@@ -1,0 +1,36 @@
+<!-- MAIN -->
+<p-dialog header="{{timedOut ? 'Sesión expirada' : 'Estado sesión'}}" class="dialogSessionActivity text-center" [(visible)]="displaySessionActivity"
+    [modal]="true" [draggable]="false" [closable]="false">
+    <ng-container *ngIf="!timedOut">
+        <p>Su sesión expirará por inactividad con el sistema en: <strong style="color:red;">{{idleState}}</strong> segundos.</p>
+    </ng-container>
+    <ng-container *ngIf="timedOut">
+        <p>Su sesión a expirado por inactividad con el sistema</p>
+        <button type="text" pButton class="buttonHeader ui-button-danger" label="Iniciar sesión" (click)="expiredSession();"></button>
+    </ng-container>
+</p-dialog>
+<div id="wrapper">
+    <!-- MENU LEFT -->
+
+    <button type="button" id="hamburgerR" title="Usuario" class="hamburger-right is-closed" data-toggle="offcanvasR">
+                    <span><i class="fa fa-user"></i></span>
+                </button>
+
+    <!-- HEADER -->
+    <header-panel (error)="errorEmitter($event);" (navigation)="onNavigate($event);" ></header-panel>
+    <!-- BODY -->
+    <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 bodyContainer">
+        <ng-container *ngIf="!error && !mantencion && !no_contenido && !expired">
+            <!-- CONTENT -->
+            <body-panel (navigation)="onNavigate($event);" (error)='errorEmitter($event)'></body-panel>
+        </ng-container>
+        <ng-container *ngIf="error || mantencion || no_contenido || expired">
+            <!-- MANTENCION || ERROR || SIN CONTENIDO || EXPIRADO -->
+            <dynamic-component [componentData]="componentData"></dynamic-component>
+        </ng-container>
+    </div>
+    <!-- MENU RIGHT -->
+    <menu-right-panel></menu-right-panel>
+    <!-- FOOTER -->
+    <footer-panel></footer-panel>
+</div>

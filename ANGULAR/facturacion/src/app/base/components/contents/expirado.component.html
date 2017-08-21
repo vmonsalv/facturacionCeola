@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+    <div class="panel-body text-center" style="padding-top:2%;">
+        <img alt="error_db" height="65" src="./assets/img/clock.png" />
+        <h3 style="color:red;">Sesión expirada</h3>
+        <br/>
+        <span class="textErrorMantencion">Estimado(a) <span style="padding-left: 10px;">Usuario(a)</span></span><br/><br/>
+        <span class="textErrorMantencion">Lo sentimos. Por inactividad con el sistema, su sesión de usuario ha expirado.</span><br/>
+        <span class="textErrorMantencion">Le recomendamos que vuelva a ingresar a la aplicación.</span>
+        <br/><br/>
+        <button type="text" pButton class="buttonHeader ui-button-danger" label="Iniciar sesión" (click)="expiredSession();"></button>
+        <br/><br/><br/><br/><br/>
+        <p class="text-muted">
+            {{appName}}
+            <br/> Versión {{appVersion}}
+            <br/> Chile - {{appYear}}
+        </p>
+    </div>
+</div>

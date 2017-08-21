@@ -1,0 +1,6 @@
+{
+    "code": "usuario",
+    "host": "192.168.0.100",
+    "port": 2001,
+    "path": "/usuario"
+}

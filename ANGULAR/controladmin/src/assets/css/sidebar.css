@@ -1,0 +1,356 @@
+
+/*           VARIABLES           */
+/*-------------------------------*/
+.nav .open > a {
+  background-color: transparent;
+}
+.nav .open > a:hover {
+  background-color: transparent;
+}
+.nav .open > a:focus {
+  background-color: transparent;
+}
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+
+#hamburgerL, #hamburgerR, #hamburgerR2  {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 7777 !important;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+#hamburgerR.toggled, #hamburgerR2.toggled{
+    margin-right: 220px;
+}
+
+#sidebar-wrapper.toggled, #sidebar-wrapper-right.toggled, #sidebar-wrapper-right2.toggled  {
+  width: 220px;
+  border: none;
+}
+
+#sidebar-wrapper {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  /*background: #177DC1;*/
+  background: #004A7C;
+  height: 100%;
+  right: inherit;
+  left: 220px;
+  margin-left: -220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.5s ease;
+  width: 0;
+  z-index: 9999;
+}
+
+#sidebar-wrapper-right2 {
+  top:75px;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  /*background: #177DC1;*/
+  background: rgba(0, 74, 124, 0.65);
+  height: 370px;
+  right: 220px;
+  left: inherit;
+  margin-right: -220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.5s ease;
+  width: 0;
+  z-index: 8888;
+  border-bottom-left-radius: 20px;
+}
+
+#sidebar-wrapper-right{
+  top:20px;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  /*background: #177DC1;*/
+  background: rgba(0, 74, 124, 0.65);
+  height: 390px;
+  right: 220px;
+  left: inherit;
+  margin-right: -220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.5s ease;
+  width: 0;
+  z-index: 8888;
+  border-bottom-left-radius: 20px;
+}
+
+#sidebar-wrapper::-webkit-scrollbar, #sidebar-wrapper-right::-webkit-scrollbar, #sidebar-wrapper-right2::-webkit-scrollbar {
+  display: none;
+}
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
+.sidebar-nav, .sidebar-nav-right, .sidebar-nav-right2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /*position: absolute;*/
+  top: 0;
+  width: 220px;
+}
+
+.sidebar-nav li {
+  display: inline-block;
+  line-height: 20px;
+  position: relative;
+  width: 100%;
+}
+.sidebar-nav .normalLi:before {
+  background-color: #2399E5;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 3px;
+  z-index: -1;
+}
+
+.menuLeftMantencion{
+  cursor: initial;
+}
+
+.sidebar-nav li:first-child a {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+.sidebar-nav li:hover:before {
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 100%;
+}
+.sidebar-nav li a {
+  color: #dddddd;
+  display: block;
+  padding: 5px 0px 5px 10px;
+  text-decoration: none;
+}
+.sidebar-nav li.open:hover before {
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 100%;
+}
+.sidebar-nav .dropdown-menu {
+  background-color: #222222;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.sidebar-nav li a:hover,
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus,
+.sidebar-nav li.open a:hover,
+.sidebar-nav li.open a:active,
+.sidebar-nav li.open a:focus {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+}
+.sidebar-nav > .sidebar-brand {
+  font-size: 20px;
+  height: 65px;
+  line-height: 44px;
+}
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+.hamburger {
+  background-color: #2399E5;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: none;
+  display: block;
+  height: 25px;
+  /*margin-left: 15px;*/
+  position: fixed;
+  top: 20px;
+  color:white;
+  width: 40px;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 480px) {
+  .hamburger, .hamburger-right{
+    width: 40px !important;
+    top: 10px !important;
+  }
+  .hamburger-right2{
+    width: 40px !important;
+    bottom: 20px !important;
+  }
+}
+
+.hamburger-right {
+  background-color: #D9534F;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+  display: block;
+  height: 30px;
+  /*margin-left: 15px;*/
+  position: fixed;
+  right: 0;
+  top: 20px;
+  color:white;
+  width: 40px;
+  z-index: 9999;
+}
+
+.hamburger-right2 {
+  background-color: #5CB85C;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+  display: block;
+  height: 30px;
+  /*margin-left: 15px;*/
+  position: fixed;
+  right: 0;
+  top: 75px;
+  color:white;
+  width: 40px;
+  z-index: 9999;
+}
+
+.hamburger:hover, .hamburger-right:hover {
+  outline: none;
+}
+.hamburger:focus, .hamburger-right:hover {
+  outline: none;
+}
+.hamburger:active, .hamburger-right:active {
+  outline: none;
+}
+
+.hamburger.is-closed:before {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  color: #ffffff;
+  content: '';
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  opacity: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.hamburger.is-closed:hover before {
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  display: block;
+  opacity: 1;
+}
+
+.hamburger-right.is-closed:before {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  color: #ffffff;
+  content: '';
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  opacity: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.hamburger-right.is-closed:hover before {
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  display: block;
+  opacity: 1;
+}
+
+.hamburger.is-open:before {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  color: #ffffff;
+  content: '';
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  opacity: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.hamburger.is-open:hover before {
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  display: block;
+  opacity: 1;
+}
+
+.hamburger-right.is-open:before {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  color: #ffffff;
+  content: '';
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  opacity: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.hamburger-right.is-open:hover before {
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  display: block;
+  opacity: 1;
+}
+/*-------------------------------*/
+/*          Dark Overlay         */
+/*-------------------------------*/
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.menu-active{
+  background-color: #2399E5;
+}
+
+.enganchado{
+  padding-left: 220px;
+}
+
+.hideButtonMenu{
+  display:none;
+}

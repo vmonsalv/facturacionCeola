@@ -1,0 +1,40 @@
+<p-growl [(value)]="msgsApp"></p-growl>
+
+<modal #menusModal [keyboard]="false" [backdrop]="'static'">
+    <div class="panel panel-primary no-margin-bottom">
+        <div class="panel-heading">
+            <div class="panel-title">Menus aplicación "{{aplicacionSelected.nombre}}"</div>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                <p-dataTable [value]="menus" class="small">
+                    <p-column field="nombre" header="Nombre"></p-column>
+                    <p-column [style]="{'text-align':'center'}" header="Estado">
+                        <ng-template let-menu="rowData" pTemplate="body">
+                            <p-dropdown (onChange)="changeEstadoMenu($event, menu, aplicacionSelected);" [options]="menu.comboEstado" [(ngModel)]="menu.estado"
+                                [autoWidth]="false" [style]="{'width':'100%'}" appendTo="body"></p-dropdown>
+                        </ng-template>
+                    </p-column>
+                </p-dataTable>
+            </div>
+        </div>
+        <div class="panel-footer text-center">
+            <button type="button" pButton icon="fa-undo" class="ui-button-primary" (click)="closeMenuModal()" label="Volver"></button>
+        </div>
+    </div>
+</modal>
+
+<p-dataTable [value]="aplicaciones" class="small">
+    <p-column field="nombre" header="Nombre"></p-column>
+    <p-column header="Estado">
+        <ng-template let-app="rowData" pTemplate="body">
+            <p-dropdown (onChange)="changeEstadoApp($event, app);" [options]="app.comboActivo" [(ngModel)]="app.estado" [autoWidth]="false"
+                [style]="{'width':'100%'}" appendTo="body"></p-dropdown>
+        </ng-template>
+    </p-column>
+    <p-column [style]="{'text-align':'center'}" header="Ver/Editar menús aplicación">
+        <ng-template let-app="rowData" pTemplate="body">
+            <button type="button" (click)="onMenuModal(app)" pButton icon="fa-pencil"></button>
+        </ng-template>
+    </p-column>
+</p-dataTable>

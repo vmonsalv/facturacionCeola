@@ -1,0 +1,13 @@
+<!-- Body -->
+<ng-container *ngIf="!mantencion && !error">
+    <!-- Content -->
+    <div class="ui-lg-12 ui-md-12 ui-sm-12 ui-g-12 no-padding body-panelStyle">
+        <body-panel (navigation)="onNavigate($event);" (error)='errorEmitter($event)'></body-panel>
+    </div>
+</ng-container>
+<ng-container *ngIf="mantencion || error">
+    <!-- MANTENCION || ERROR || SIN CONTENIDO -->
+    <dynamic-component [componentData]="componentData"></dynamic-component>
+</ng-container>
+<!-- Footer -->
+<footer-panel></footer-panel>

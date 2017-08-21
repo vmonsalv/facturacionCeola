@@ -1,0 +1,237 @@
+<p-growl [(value)]="results"></p-growl>
+
+<modal #insertPresupuesto [keyboard]="false" [backdrop]="'static'">
+    <div class="panel panel-primary no-margin-bottom">
+        <div class="panel-heading">
+            <div class="panel-title">Crear presupuesto</div>
+        </div>
+        <div class="panel-body">
+            <p-messages [(value)]="msgsPresupuesto"></p-messages>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding margin-bottom">
+                <span class="text-info"><strong>Previsión</strong></span><br/>
+                <p-dropdown [options]="previsionesSelect" filter="filter" class="comboPrevision" [(ngModel)]="nuevoPresupuesto.ID_Prevision"
+                    placeholder="Seleccione una previsión" (onChange)="searchPresupuestoBase($event)"></p-dropdown>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding margin-bottom" *ngIf="nuevoPresupuesto.ID_Prevision != 0">
+                <span class="text-info"><strong>Prestación</strong></span><br/>
+                <p-dropdown [options]="prestacionesSelect" class="comboPrevision" filter="filter" [(ngModel)]="nuevoPresupuesto.ID_Prestacion"
+                    placeholder="Seleccione una prestación"></p-dropdown>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding margin-bottom text-center">
+                <span class="text-info"><strong>Tipo de presupuesto</strong></span><br/>
+                <p-selectButton [options]="pad_paquetizado" [(ngModel)]="nuevoPresupuesto.tipo"></p-selectButton>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding margin-bottom text-center">
+                <span class="text-info"><strong>Valor por</strong></span><br/>
+                <p-selectButton [options]="ojos" [(ngModel)]="nuevoPresupuesto.cant_ojos"></p-selectButton>
+            </div>
+            <ng-container *ngIf="nuevoPresupuesto.cant_ojos == 2">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding margin-bottom text-center">
+                    <span class="text-info"><strong>Descuento 50%</strong></span>
+                    <p-checkbox [(ngModel)]="nuevoPresupuesto.descuento_50" binary="true"></p-checkbox>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="nuevoPresupuesto.tipo == 1">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding margin-bottom">
+                    <p-dataTable emptyMessage="Sin equipo médico." [value]="nuevoPresupuesto.honorarioMedico">
+                        <p-header>Honorarios Médicos</p-header>
+                        <p-column field="tipo" header="Tipo">
+                            <ng-template let-honorario="rowData" pTemplate="body">
+                                <input pInputText class="form-control" placeholder="Ingrese tipo" [(ngModel)]="honorario.tipo">
+                            </ng-template>
+                        </p-column>
+                        <p-column header="Precio">
+                            <ng-template let-honorario="rowData" let-rowIndex="rowIndex" pTemplate="body">
+                                <input pInputText class="form-control" (keypress)="onlyNumbers($event)" (change)="sumarCostos();" placeholder="Ingrese precio"
+                                    [(ngModel)]="precio_honorario[rowIndex]">
+                            </ng-template>
+                        </p-column>
+                        <p-column [style]="{'width':'60px'}" header="Eliminar" styleClass="text-center">
+                            <ng-template let-honorario="rowData" pTemplate="body">
+                                <ng-container *ngIf="honorario.definitivo">
+                                    <button pButton (click)="onDeleteHonorario(honorario)" type="button" icon="fa-times" class="ui-button-danger"></button>
+                                </ng-container>
+                            </ng-template>
+                        </p-column>
+                        <p-footer>
+                            <div class="ui-helper-clearfix" style="width:100%"><button type="button" pButton icon="fa-plus" style="float:left" (click)="onInsertHonorario()"
+                                    label="Agregar"></button><span style="float: right;">Total: {{nuevoPresupuesto.total_honorario}}</span></div>
+                        </p-footer>
+                    </p-dataTable>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding margin-bottom">
+                    <p-dataTable emptyMessage="Sin insumos médicos." [value]="nuevoPresupuesto.insumosCentroLaser">
+                        <p-header>Centro Laser</p-header>
+                        <p-column field="tipo" header="Tipo">
+                            <ng-template let-centro="rowData" pTemplate="body">
+                                <input pInputText class="form-control" placeholder="Ingrese tipo" [(ngModel)]="centro.tipo">
+                            </ng-template>
+                        </p-column>
+                        <p-column header="Precio">
+                            <ng-template let-honorario="rowData" let-rowIndex="rowIndex" pTemplate="body">
+                                <input pInputText class="form-control" (keypress)="onlyNumbers($event)" (change)="sumarCostos();" placeholder="Ingrese precio"
+                                    [(ngModel)]="precio_centro[rowIndex]">
+                            </ng-template>
+                        </p-column>
+                        <p-column [style]="{'width':'60px'}" header="Eliminar" styleClass="text-center">
+                            <ng-template let-centro="rowData" pTemplate="body">
+                                <ng-container *ngIf="centro.definitivo">
+                                    <button pButton (click)="onDeleteCentro(centro)" type="button" icon="fa-times" class="ui-button-danger"></button>
+                                </ng-container>
+                            </ng-template>
+                        </p-column>
+                        <p-footer>
+                            <div class="ui-helper-clearfix" style="width:100%"><button type="button" pButton icon="fa-plus" style="float:left" (click)="onInsertCentro()" label="Agregar"></button>
+                                <span style="float: right;">Total: {{nuevoPresupuesto.total_insumos}}</span>
+                            </div>
+                        </p-footer>
+                    </p-dataTable>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding margin-bottom">
+                    <p-dataTable emptyMessage="Sin adicionales." [value]="nuevoPresupuesto.adicionales">
+                        <p-header>Adicionales</p-header>
+                        <p-column field="nombre" header="Nombre">
+                            <ng-template let-adi="rowData" pTemplate="body">
+                                <input pInputText class="form-control" placeholder="Ingrese nombre" [(ngModel)]="adi.tipo">
+                            </ng-template>
+                        </p-column>
+                        <p-column header="Precio">
+                            <ng-template let-honorario="rowData" let-rowIndex="rowIndex" pTemplate="body">
+                                <input pInputText class="form-control" (keypress)="onlyNumbers($event)" (change)="sumarCostos();" placeholder="Ingrese precio"
+                                    [(ngModel)]="precio_adicional[rowIndex]">
+                            </ng-template>
+                        </p-column>
+                        <p-column [style]="{'width':'60px'}" header="Eliminar" styleClass="text-center">
+                            <ng-template let-adi="rowData" pTemplate="body">
+                                <ng-container *ngIf="adi.definitivo">
+                                    <button pButton (click)="onDeleteAdicional(adi)" type="button" icon="fa-times" class="ui-button-danger"></button>
+                                </ng-container>
+                            </ng-template>
+                        </p-column>
+                        <p-footer>
+                            <div class="ui-helper-clearfix" style="width:100%"><button type="button" pButton icon="fa-plus" style="float:left" (click)="onInsertAdicional()"
+                                    label="Agregar"></button><span style="float: right;">Total: {{nuevoPresupuesto.total_adicionales}}</span></div>
+                        </p-footer>
+                    </p-dataTable>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="nuevoPresupuesto.tipo > 0">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding margin-bottom">
+                    <div class="input-group margin-bottom">
+                        <span class="input-group-addon">{{nuevoPresupuesto.tipo == 2 ? 'Programa médico' : 'TOTAL'}}</span>
+                        <input pInputText class="form-control" style="text-align: right;" [disabled]="nuevoPresupuesto.tipo == 1 ? true : false"
+                            [(ngModel)]="nuevoPresupuesto.total">
+                    </div>
+                </div>
+            </ng-container>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                <span class="text-info"><strong>Notas</strong></span><br/>
+                <textarea pInputTextarea style="width:100%;resize: none;" rows="4" placeholder="Ingrese notas (opcional)" [(ngModel)]="nuevoPresupuesto.notas"></textarea>
+            </div>
+        </div>
+        <div class="panel-footer text-center">
+            <button type="button" pButton icon="fa-undo" class="ui-button-primary" (click)="closeModalPresupuesto()" label="Volver"></button>
+            <button type="button" pButton icon="fa-check" class="ui-button-success" label="Crear"></button>
+        </div>
+    </div>
+</modal>
+
+<modal #selectPresupuesto [keyboard]="false" [backdrop]="'static'">
+    <div class="panel panel-primary no-margin-bottom">
+        <div class="panel-heading">
+            <div class="panel-title">Presupuesto</div>
+        </div>
+        <div class="panel-body">
+
+        </div>
+        <div class="panel-footer text-center">
+            <button type="button" pButton icon="fa-undo" class="ui-button-primary" (click)="closeModalPresupuestoSelect()" label="Volver"></button>
+        </div>
+    </div>
+</modal>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding-left no-padding-right margin-bottom">
+    <div class="panel panel-info no-margin-bottom">
+        <div class="panel-heading">
+            <div class="panel-title"><i class="fa fa-search"></i> Buscar paciente</div>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 no-padding-left">
+                <div class="input-group">
+                    <span class="input-group-addon">Rut</span>
+                    <input pInputText class="form-control" (keypress)="onlyNumbers($event)" style="text-align: right;" maxlength="9" placeholder="123456789"
+                        [(ngModel)]="rutSearch">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button" (click)="searchPaciente();"><i class="fa fa-search"></i> Buscar</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding">
+                <p-messages [(value)]="msgsPacienteSearch"></p-messages>
+                <p-dataTable emptyMessage="Sin paciente." class="small" [value]="pacienteFound">
+                    <p-column [style]="{'width':'80px'}" field="rut_glosa" header="Rut"></p-column>
+                    <p-column field="nombres" header="Nombres"></p-column>
+                    <p-column field="apellidos" header="Apellidos"></p-column>
+                    <p-column field="fec_nac_glosa" header="Fec. Nacimiento"></p-column>
+                    <p-column field="prevision_glosa" [style]="{'width':'100px'}" header="Previsión"></p-column>
+                </p-dataTable>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding-left no-padding-right">
+    <div class="panel panel-info no-margin-bottom">
+        <div class="panel-heading">
+            <div class="panel-title"><i class="fa fa-usd"></i> Presupuestos paciente</div>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+                    <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+                    <input #presus type="text" pInputText size="50">
+                    <button type="button" [disabled]="foundIt" pButton icon="fa-plus" style="float:right; " (click)="onInsertPresupuesto()" label="Crear presupuesto"></button>
+                </div>
+                <p-dataTable emptyMessage="Sin presupuestos registrados." class="small" [value]="presupuestos" [globalFilter]="presus" [rows]="10"
+                    [paginator]="true" [pageLinks]="6">
+                    <p-column [style]="{'width':'80px'}" header="Fec. Creación">
+                        <ng-template let-presupuesto="rowData" pTemplate="body">
+                            {{presupuesto.fec_creacion | date:"dd/MM/yyyy"}}
+                        </ng-template>
+                    </p-column>
+                    <p-column [style]="{'width':'80px'}" field="rut_creador" header="Creado por"></p-column>
+                    <p-column [style]="{'width':'100px'}" header="Previsión">
+                        <ng-template let-presupuesto="rowData" pTemplate="body">
+                            <ng-container *ngFor="let previ of previsiones">
+                                <ng-container *ngIf="previ.ID == presupuesto.ID_Prevision">
+                                    {{previ.nombre}}
+                                </ng-container>
+                            </ng-container>
+                        </ng-template>
+                    </p-column>
+                    <p-column [style]="{'width':'80px'}" header="Vigencia">
+                        <ng-template let-presupuesto="rowData" pTemplate="body">
+                            {{presupuesto.vigencia}} dias
+                        </ng-template>
+                    </p-column>
+                    <p-column [style]="{'width':'50px'}" header="Ver/Descargar" styleClass="text-center">
+                        <ng-template let-presupuesto="rowData" pTemplate="body">
+                            <button pButton (click)="onSelectPresupuesto(presupuesto)" type="button" icon="fa-file-o" class="ui-button-success"></button>
+                        </ng-template>
+                    </p-column>
+                    <p-column [style]="{'width':'50px'}" header="Editar" styleClass="text-center">
+                        <ng-template let-presupuesto="rowData" pTemplate="body">
+                            <button pButton (click)="onEditPaciente(presupuesto)" type="button" icon="fa-edit" class="ui-button-warning"></button>
+                        </ng-template>
+                    </p-column>
+                    <p-column [style]="{'width':'50px'}" header="Eliminar" styleClass="text-center">
+                        <ng-template let-presupuesto="rowData" pTemplate="body">
+                            <button pButton (click)="onEditPaciente(presupuesto)" type="button" icon="fa-times" class="ui-button-danger"></button>
+                        </ng-template>
+                    </p-column>
+                    <p-footer>Hay <span style="color:red;font-weight: bold;">{{presupuestos.length}}</span> presupuestos registrados
+                        del paciente</p-footer>
+                </p-dataTable>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,526 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body, html {
+    background-color: #F6F7F9;
+    height: 100%;
+}
+.fuente{color:#FAFAFA;}
+.title-style{font-size: 25px;}
+.subtitle-style{font-size: 16px;}
+.container-fluid{min-width:800px}
+.container-fluid-header{border:none;}
+.container-fluid-left{padding-left:0;padding-top:15px;padding-bottom:15px}
+.container-title-style{position:absolute;}
+.container-fluid-content{background-color:#fff;padding-top:15px;border:none;}
+.navbar-default{background-image: linear-gradient(to bottom,#F5F5F5 0,#F5F5F5 100%);}
+.space-footer{margin-bottom:20px}
+.space-footer-social,.space-menu-btn{padding-right:10px}
+.linkHover:hover{
+    color:#F0AD4E !important;
+}
+.menu-container{padding-top: 15px;}
+.menu-z-index{z-index: 1;}
+
+.img-profile{border-bottom:10px}
+
+.navbar-content-dropdown-comments{width:400px;padding-bottom:0;padding-top:15px}
+.navbar-content-dropdown-apps{width:200px}
+.navbar-content-dropdown-userAccount{width:380px;padding-bottom:0}
+.row-navbar-content-dropdown-userAccount{background-color:#fff;padding-bottom:10px;border-bottom:1px solid #ccc}
+.navbar-content-dropdown-comments .btn{margin-right:5px}
+.navbar-content-apps{border-bottom:1px solid #ccc}
+.navbar-content-dropdown-apps .navbar-content-apps-wrapper{padding:15px}
+.navbar-content .alert{padding:5px 10px}
+.navbar-content:before,.navbar-content:after{display:table;content:"";line-height:0}
+.form-group-comments{margin:0!important;padding-bottom:15px}
+
+.buttonHeader{min-width:70px;max-width:150px}
+
+.menu-toolbar .dropdown-menu{left: -311px !important}
+
+.subMenu{padding-left: 10px;}
+.menu-active{font-weight:normal}
+.menu-active a{color: #fff !important}
+
+.subMenuTitle{display: block;}
+
+.padding-original{padding: 30px !important;}
+.padding-top{padding-top:  15px !important;}
+.padding-down{padding-bottom:  15px !important;}
+.padding-left{padding-left:  15px !important;}
+.padding-right{padding-right:  15px !important;}
+.no-padding{padding: 0px}
+.no-padding-bottom{padding-bottom: 0px !important}
+.no-padding-top{padding-top: 0px !important}
+.no-padding-left{padding-left: 0px !important}
+.no-padding-right{padding-right: 0px !important}
+.margin-bottom{margin-bottom: 15px !important}
+.margin-top{margin-top: 15px !important}
+.margin-top-double{margin-top: 30px !important}
+.margin-left{margin-left: 15px !important}
+.margin-right{margin-right: 15px !important}
+.margin{margin: 15px !important}
+.no-margin-bottom{margin-bottom: 0px !important}
+.no-margin-top{margin-top: 0px !important}
+.no-margin-left{margin-left: 0px !important}
+.no-margin-right{margin-right: 0px !important}
+.no-margin{margin: 0px !important}
+.margin-left-doble{margin-left: 30px !important}
+.margin-right-doble{margin-right: 30px !important}
+.strong{font-weight: bold;}
+
+
+.btn-xlarge{
+    position: relative;
+    vertical-align: center;
+    /*margin: 20px;*/
+    padding: 40px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #62b1d0;
+    border: 0;
+    cursor: pointer;
+    min-width: none;
+    max-width: none;
+    display: block;
+    opacity: .75;
+    box-shadow: none;
+}
+
+.btn-xlarge-pregrado{
+    position: relative;
+    vertical-align: center;
+    /*margin: 20px;*/
+    padding: 40px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #7AC57A;
+    border: 0;
+    cursor: pointer;
+    min-width: none;
+    max-width: none;
+    display: block;
+}
+
+
+.init{
+    width: 100%;
+    height: 100%;
+    /*top: 15%;*/
+    padding-top:7%;
+    text-align: center;
+    position: fixed;
+    background-color: #004A7C !important;
+}
+
+.btn-xlarge-mantencion{
+    background: #a0b8c1 !important;
+}
+
+.btn-xlarge:active {
+    top: 2px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-xlarge:hover {
+    background: #45E1E8;
+    color: #fff !important;
+}
+
+.fa-huge{
+    font-size: 10em;
+}
+
+.itemAlumno{
+    font-weight: bold;
+    width: 45%;
+}
+
+.fotoAyuda{
+    border: 5px solid #ddd;
+    border-radius: 8px;
+}
+
+.tableError td{
+    border: 1px solid #D75A4A;
+    padding: 8px;
+}
+
+.headerTableError{
+    background-color:#D75A4A;
+    color: white;
+}
+
+.mainBox{
+    padding-left: 20px;
+    padding-right:20px;
+}
+.buttonFooter{
+    padding: 1% 15% 1% 15%;
+}
+.boxCertificado{
+    padding: 0% 3% 0% 3%;
+}
+.detalleCertificado{
+    padding-left: 10%;padding-right: 10%;
+}
+.bodyBox{
+    margin: 0% 3% 0% 3%;
+}
+.bodyBoxSub{
+    margin: 0% 4% 0% 4%;
+}
+.infoBox{
+    padding: 0px 20% 0% 20%;
+    margin-top: 5%;
+}
+
+.body-panelStyle{
+    background-color: #F6F7F9;
+    /*background-image: url("assets/img/places/ciencias.jpg"); 
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background-image 1s ease-out;*/
+}
+
+.marginBotonera{
+    margin-top: 4%;
+}
+
+.avisoImportante{
+    margin-bottom: 2%;
+    padding: 0px 25% 0px 25%;
+}
+
+.panel-importante-danger>.panel-heading{
+    background-color: #F44336 !important;
+    background-image: none !important;
+    color: white !important;
+    
+}
+.panel-importante-danger{
+    border-color: #F44336 !important;
+}
+
+.panel-importante-success>.panel-heading{
+    background-color: #5CB85C !important;
+    background-image: none !important;
+    color: white !important;
+    
+}
+.panel-importante-success{
+    border-color: #5CB85C !important;
+}
+
+.panel-importante-warning>.panel-heading{
+    background-color: #F0AD4E !important;
+    background-image: none !important;
+    color: white !important;
+    
+}
+.panel-importante-warning{
+    border-color: #F0AD4E !important;
+}
+
+@media screen and (max-width: 480px) {
+    .appBox{
+        margin-left: 0px !important;
+        margin-right: 0px!important;
+    }
+    .mainBox{
+        padding-top: 5%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .buttonFooter, .boxCertificado{
+        padding: 0px;
+    }
+    .estadoCertificado{
+        padding: 0px 0px 0px 0px;
+    }
+    .detalleCertificado{
+    padding: 0px 0px 0px 0px;
+    }
+    .bodyBox{
+        margin: 0% 2% 0% 2%;
+    }
+    .bodyContainer{
+        margin-top:65px !important;
+        margin-bottom:75px !important;
+    }
+}
+
+.bodyContainer{
+    margin-top:70px;margin-bottom:55px;
+}
+
+#comboModulosMovil > .ui-dropdown{
+    width: 100% !important;
+}
+
+.botonSuperior{
+    border: #E8F1F5 !important;
+    background-color: #E8F1F5 !important;
+    color: #003C92;
+}
+
+.botonSuperior:hover{
+    border: #F0AD4E !important;
+    background-color: #F0AD4E !important;
+    color: #003C92;
+}
+
+.addonHover:hover{
+    background-color: #F0AD4E !important;
+}
+
+.ui-password-info, .ui-password-meter, .ui-password-panel{
+    display: none;
+}
+
+.principalBox{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.headerMainBox{
+    opacity: 0.75;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: none;
+}
+.bodyMainBox{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color:white;
+    background-image: none;
+}
+
+.externalLinks{
+    padding: 0.5% 0px 0.5% 0px;
+    margin-top: 8%;
+    background: rgba(255,255,255, 0.3)
+}
+
+.userOnline{
+    padding: 0.5% 0px 0.5% 0px;
+    margin-top: 1%;
+    background: rgba(90, 206, 250, 0.3)
+}
+
+.appBox{
+    padding:0;
+    margin-top: 3%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    background: rgba(255,255,255, 0.3)
+}
+
+.linkMovil:hover{
+    background: rgba(255,255,0, 0.3);
+}
+
+@media screen and (max-width: 1366px) {
+    .externalLinks{
+        padding: 0.5% 0px 0.5% 0px;
+        margin-top: 2%;
+        background: rgba(255,255,255, 0.3)
+    }
+}
+
+.subrayadoACA-A{
+    border-bottom:3px solid rgba(90, 206, 250, 0.3);
+    padding-bottom:3%;
+}
+.subrayadoACA-D{
+    border-bottom:3px solid rgba(0, 255, 100, 0.3);
+    padding-bottom:3%;
+}
+.subrayadoADM{
+    border-bottom:3px solid rgba(255, 165, 0, 0.3);
+    padding-bottom:3%;
+}
+.subrayadoMED{
+    border-bottom:3px solid rgba(255, 0, 0, 0.3);
+    padding-bottom:3%;
+}
+
+.bodyContent{
+    background-color: #F6F7F9;
+}
+
+#tituloCuenta{
+    padding: 5px 0px 5px 0px;
+    background-color:#D9534F;
+    color:white;
+    cursor:pointer;
+}
+
+#tituloContacto{
+    padding: 5px 0px 5px 0px;
+    background-color:#5CB85C;
+    color:white;
+    cursor:pointer;
+}
+
+#titleApp{
+    background-color:#EC971E;
+    color:white;
+    font-size: 20px;
+    padding: 15px;
+}
+
+#fotoUsuario{
+    height: 145px !important;
+    border:2px solid #CCCCCC;
+    margin: 0 auto;
+}
+
+#datosPersonales{
+    color:white;
+}
+
+.sidebar-nav > li{
+    cursor:pointer;
+}
+
+.mantencionText{
+    color:#F0AD4E;
+}
+
+#boxBotonAnclar{
+    position: absolute;bottom: 100px;
+}
+
+#logoUVright{
+    position: absolute;bottom: 10px;margin:8px 0px 8px 20%    
+}
+
+#logoUVheader{
+    margin:8px 0px 8px 0px; 
+}
+
+.navHeader{
+    background-color: #004A7C !important;
+    background-image: none !important;
+    border-bottom:1px solid #004A7C;
+}
+
+#footer{
+    font-size:78%;background-color:#004A7C;position: fixed;bottom: 0;left:0;
+}
+
+.boxFooter{
+    margin:8px 0px 8px 0px;
+}
+
+.confirmaLogOut .ui-dialog{
+    z-index: 9999 !important;
+}
+
+.textButtonHome{
+    padding: 1.25em 1em !important;
+}
+
+.tachado{
+    text-decoration:line-through;
+}
+
+.btn-mantencion{
+    /*opacity: 0.3;*/
+    cursor: not-allowed;
+}
+
+
+.buttonHome:hover{
+    background: #499DDF !important;
+}
+
+.bodyStyle{
+    background-color: #F6F7F9 !important;
+}
+
+.buttonMenuHome{
+    border-radius: 12px;
+    border: 2px solid #F6F7F9;
+    color: black;
+    font-size:15px;
+}
+
+.buttonMenuHome:hover{
+    border: 2px solid #E6E6E6;
+}
+
+.ui-growl {
+    z-index: 9999 !important;
+}
+
+.ng-busy{
+    z-index: 9999 !important;
+}
+
+.dialogSessionActivity > .ui-dialog{
+    z-index: 9050 !important;
+}
+
+.ui-dialog-titlebar{
+    background: #004A7C !important;
+    color: white !important;
+}
+
+.ui-dialog{
+    border: none !important;
+}
+
+.ui-widget-overlay{
+    z-index: 9000 !important;
+}
+
+.ui-dialog{
+    z-index: 9001 !important;
+}
+
+.ui-chkbox > .ui-state-active{
+   background-color: green !important;
+}
+
+.menuHeader:hover{
+    background-color: #F0AD4E !important;
+}
+
+.ui-messages{
+    margin-top: 0px !important;
+}
+
+.comboPrevision > .ui-dropdown{
+    width: 100% !important;
+}
+
+.ui-calendar{
+    width: 91% !important;
+}
+.ui-calendar > .ui-inputtext{
+    width: 100% !important;
+}
+
+.ui-dropdown-panel{
+    z-index: 9999 !important;
+}
+
+.text-rojo{
+    color: red;
+}
+
+.text-verde{
+    color: green;
+}

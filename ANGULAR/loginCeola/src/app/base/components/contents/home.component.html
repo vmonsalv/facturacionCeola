@@ -1,0 +1,20 @@
+<div [ngBusy]="busy" message="Cargando..." backdrop="false"></div>
+<div class="container">
+    <div class="card card-container">
+        <img src="./assets/img/centroLaser-logo.png" height="75">
+        <p-messages [(value)]="msgs" [closable]="false"></p-messages>
+        <span id="reauth-email" class="reauth-email"></span>
+        <input pInputText placeholder="usuario" (keypress)="onlyNumbers($event)" maxlength="9" class="form-control" id="inputEmail" [(ngModel)]="user">
+        <br/>
+        <input type="password" id="inputPassword" placeholder="contraseña" pInputText class="form-control" [(ngModel)]="password">
+        <br/>
+        <p-dropdown [options]="aplicaciones" [(ngModel)]="appSelected" placeholder="Seleccione una aplicación"></p-dropdown>
+        <br/>
+        <br/>
+        <ng-container *ngIf="modoDesarrollo">
+            <span style="color:red;"><strong>MODO DESARROLLADOR</strong></span>            
+            <input pInputText class="form-control" id="inputEmail" [(ngModel)]="urlDesarrollo"><br/>
+        </ng-container>
+        <button class="btn btn-lg btn-primary btn-block" (click)="loginUsuario()">Ingresar</button>
+    </div>
+</div>
