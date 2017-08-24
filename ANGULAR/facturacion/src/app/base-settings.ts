@@ -1,7 +1,7 @@
 export class BaseSettings {
 
     public static get URL_BACKEND(): string {
-        return "http://192.168.0.13:3001/facturacion";
+        return "http://192.168.0.11:3001/facturacion";
         //return "http://192.168.0.17:3001/facturacion";
         //return "http://10.140.50.188:3001/facturacion";
         //return "http://192.168.0.100:3001/facturacion";

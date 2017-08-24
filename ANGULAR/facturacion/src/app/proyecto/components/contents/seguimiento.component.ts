@@ -40,7 +40,6 @@ export class SeguimientoComponent extends BaseComponent {
     }
 
     buscaSeguimientos(pres: Presupuesto){
-        console.log(pres.ID);
     }
 
 }

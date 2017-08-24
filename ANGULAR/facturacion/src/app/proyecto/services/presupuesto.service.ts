@@ -27,25 +27,37 @@ export class PresupuestoService {
 
     toPresupuestoBase(r: any): Presupuesto {
         let m = <Presupuesto>({
-            nombre: r.prestacion
+            id: r.id,
+            prestacion_id: r.prestacion_id,
+            prestacion_codigo: r.codigo_prestacion,
+            prestacion_glosa: r.prestacion,
+            prevision_id: r.prevision_id,
+            prevision_glosa: r.prevision,
+            protesis_id: r.protesis_id.split(","),
+            pabellon_id: r.pabellon_id,
+            vigencia: r.vigencia,
+            copago_clinica: r.copago_clinica,
+            copago_fonasa: r.copago_fonasa,
+            insumos_id: r.insumo_id.split(","),
+            medicamentos_id: r.medicamento_id.split(",")
         });
         return m;
     }
 
     toSeguimiento(r: any): Presupuesto {
         let m = <Presupuesto>({
-            ID: r.id,
-            fec_creacion: r.fec_creacion,
-            vencimiento: r.vencimiento,
-            uid: r.rut,
-            rut: r.rut.substring(0, r.rut.length - 1) + "-" + r.rut.substring(r.rut.length - 1, r.rut.length),
-            nombres: r.nombres,
-            apellidos: r.paterno + " " + r.materno,
-            fono: r.fono,
-            movil: r.movil,
-            correo: r.correo,
-            cod_prestacion: r.codigo_prestacion,
-            prestacion: r.prestacion
+            id: r.id,
+            // fec_creacion: r.fec_creacion,
+            // vencimiento: r.vencimiento,
+            // uid: r.rut,
+            // rut: r.rut.substring(0, r.rut.length - 1) + "-" + r.rut.substring(r.rut.length - 1, r.rut.length),
+            // nombres: r.nombres,
+            // apellidos: r.paterno + " " + r.materno,
+            // fono: r.fono,
+            // movil: r.movil,
+            // correo: r.correo,
+            prestacion_codigo: r.codigo_prestacion,
+            prestacion_glosa: r.prestacion
         });
         return m;
     }

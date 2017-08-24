@@ -521,3 +521,7 @@ body, html {
 .ui-calendar > .ui-inputtext{
     width: 100% !important;
 }
+
+.ui-dropdown-panel .ui-dropdown-filter-container {
+    display: block !important;
+}
