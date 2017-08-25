@@ -84,59 +84,6 @@ export class PresupuestoComponent extends BaseComponent {
         this.selectPresupuesto.open("lg");
     }
 
-    /************* GASTOS HONORARIOS MEDICOS  ***************/
-
-    onInsertHonorario() {
-        this.nuevoPresupuesto.honorarioMedico[this.nuevoPresupuesto.honorarioMedico.length - 1].definitivo = true;
-        let hono = [...this.nuevoPresupuesto.honorarioMedico];
-        let equipo = new EquipoMedico();
-        equipo.definitivo = false;
-        hono.push(equipo);
-        this.nuevoPresupuesto.honorarioMedico = hono;
-        this.sumarCostos();
-        this.precio_honorario.push("");
-    }
-
-    onDeleteHonorario(event) {
-        let indice = this.nuevoPresupuesto.honorarioMedico.indexOf(event);
-        this.nuevoPresupuesto.honorarioMedico = this.nuevoPresupuesto.honorarioMedico.filter((val, i) => i != indice);
-    }
-
-    /************* GASTOS CENTRO LASER  ***************/
-
-    onInsertCentro() {
-        this.nuevoPresupuesto.insumosCentroLaser[this.nuevoPresupuesto.insumosCentroLaser.length - 1].definitivo = true;
-        let centLaser = [...this.nuevoPresupuesto.insumosCentroLaser];
-        let centro = new CentroLaser();
-        centro.definitivo = false;
-        centLaser.push(centro);
-        this.nuevoPresupuesto.insumosCentroLaser = centLaser;
-        this.sumarCostos();
-        this.precio_centro.push("");
-    }
-
-    onDeleteCentro(event) {
-        let indice = this.nuevoPresupuesto.insumosCentroLaser.indexOf(event);
-        this.nuevoPresupuesto.insumosCentroLaser = this.nuevoPresupuesto.insumosCentroLaser.filter((val, i) => i != indice);
-    }
-
-    /************* GASTOS ADICIONALES  ***************/
-
-    onInsertAdicional() {
-        this.nuevoPresupuesto.adicionales[this.nuevoPresupuesto.adicionales.length - 1].definitivo = true;
-        let adics = [...this.nuevoPresupuesto.adicionales];
-        let adi = new Adicional();
-        adi.definitivo = false;
-        adics.push(adi);
-        this.nuevoPresupuesto.adicionales = adics;
-        this.sumarCostos();
-        this.precio_adicional.push("");
-    }
-
-    onDeleteAdicional(event) {
-        let indice = this.nuevoPresupuesto.adicionales.indexOf(event);
-        this.nuevoPresupuesto.adicionales = this.nuevoPresupuesto.adicionales.filter((val, i) => i != indice);
-    }
 
     /************* CREAR PRESUPUESTO  ***************/
 
@@ -148,17 +95,6 @@ export class PresupuestoComponent extends BaseComponent {
         adi.definitivo = false;
         equipo.definitivo = false;
         centro.definitivo = false;
-        this.nuevoPresupuesto.honorarioMedico = [equipo];
-        this.nuevoPresupuesto.insumosCentroLaser = [centro];
-        this.nuevoPresupuesto.adicionales = [adi];
-        this.nuevoPresupuesto.ID_Prevision = 0;
-        this.precio_honorario.push("");
-        this.precio_centro.push("");
-        this.precio_adicional.push("");
-        this.nuevoPresupuesto.total_honorario = 0;
-        this.nuevoPresupuesto.total_insumos = 0;
-        this.nuevoPresupuesto.total_adicionales = 0;
-        this.nuevoPresupuesto.total = 0;
         this.insertPresupuesto.open();
     }
 
@@ -170,42 +106,6 @@ export class PresupuestoComponent extends BaseComponent {
 
     /************* SUMAR GASTOS PRESUPUESTO  ***************/
 
-    precio_honorario: string[] = [];
-    precio_centro: string[] = [];
-    precio_adicional: string[] = [];
-    sumarCostos() {
-        this.nuevoPresupuesto.total_honorario = 0;
-        this.nuevoPresupuesto.total_insumos = 0;
-        this.nuevoPresupuesto.total_adicionales = 0;
-        this.nuevoPresupuesto.total = 0;
-        let indice = 0;
-        for (let precios of this.precio_honorario) {
-            if (precios != "" && precios != undefined) {
-                if (this.nuevoPresupuesto.honorarioMedico[indice++].definitivo) {
-                    this.nuevoPresupuesto.total += parseInt(precios);
-                    this.nuevoPresupuesto.total_honorario += parseInt(precios);
-                }
-            }
-        }
-        indice = 0;
-        for (let precios of this.precio_centro) {
-            if (precios != "" && precios != undefined) {
-                if (this.nuevoPresupuesto.insumosCentroLaser[indice++].definitivo) {
-                    this.nuevoPresupuesto.total += parseInt(precios);
-                    this.nuevoPresupuesto.total_insumos += parseInt(precios);
-                }
-            }
-        }
-        indice = 0;
-        for (let precios of this.precio_adicional) {
-            if (precios != "" && precios != undefined) {
-                if (this.nuevoPresupuesto.adicionales[indice++].definitivo) {
-                    this.nuevoPresupuesto.total += parseInt(precios);
-                    this.nuevoPresupuesto.total_adicionales += parseInt(precios);
-                }
-            }
-        }
-    }
 
     /************* BUSCAR PACIENTE  ***************/
 
@@ -248,7 +148,7 @@ export class PresupuestoComponent extends BaseComponent {
             presupuestos_base => {
                 this.presupuestosBase = this.presupuestoService.mapPresupuestosBase(presupuestos_base);
                 this.presupuestosBase.forEach(element => {
-                    this.prestacionesSelect.push({ label: element.nombre, value: "asd" });
+                    this.prestacionesSelect.push({ label: element.prestacion_codigo + " - " + element.prestacion_glosa, value: element.prestacion_id });
                 });
             }, error => {
                 this.errorEmitter(error);
