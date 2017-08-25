@@ -7,6 +7,7 @@ var router = express.Router();
 
 router.post('/getSegPresupuestos', presupuestoService.getSegPresupuestos);
 router.post('/getPresupuestosBase', presupuestoService.getPresupuestosBase);
+router.post('/getPresupuestosBases', presupuestoService.getPresupuestosBases);
 /*router.post('/getPresupuestos', presupuestoService.getPresupuestos);
 router.post('/getPresupuesto', presupuestoService.getPresupuesto);
 router.post('/newPresupuesto', presupuestoService.newPresupuesto);

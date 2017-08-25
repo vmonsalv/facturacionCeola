@@ -79,6 +79,40 @@ function getPresupuestosBase(request, response){
 }
 
 /*
+ *
+ * Entrada:
+ */
+function getPresupuestosBases(request, response){
+	try{
+		var connection = mysql.createConnection({
+			host: global.config.ds_ceola2017.server,
+			user: global.config.ds_ceola2017.user,
+			password: global.config.ds_ceola2017.password,
+			database: global.config.ds_ceola2017.database
+		});
+
+		connection.query('CALL sp_obtiene_presupuestos_bases()', function (error, results, fields) {
+			if(error){
+				response.status(200).json(reply.fatal(error.message));
+			} else {
+				if (results[0].length != 0) {
+					if (results[0][0].hasOwnProperty("ERR_MSSG")) {
+						response.json(reply.ok({ error: results[0][0].ERR_MSSG }));
+					} else {
+						response.json(reply.ok(results[0]));
+					}
+				} else {
+					response.json(reply.ok("Error al obtener presupuestos base."));
+				}
+			}
+		});
+		connection.end();
+	} catch(e){
+		response.status(200).json(reply.fatal(e.message));
+	}
+}
+
+/*
  * Obtiene todos los presupuestos ingresados de un usuario
  * Entrada: rut
  */
@@ -404,5 +438,6 @@ function deleteBase(request, response){
 
 module.exports = {
 	getSegPresupuestos,
-	getPresupuestosBase
+	getPresupuestosBase,
+	getPresupuestosBases
 };

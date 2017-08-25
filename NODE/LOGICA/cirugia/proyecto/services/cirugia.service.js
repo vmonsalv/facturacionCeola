@@ -83,7 +83,7 @@ function getCirugia(request, response){
 
 		var id = JSON.parse(request.body.arg).id;
 
-		connection.query('CALL sp_obtener_cirugia(?)'. [id], function (error, results, fields) {
+		connection.query('CALL sp_obtener_cirugia(?)', [id], function (error, results, fields) {
 			if(error){
 				response.status(200).json(reply.fatal(error.message));
 			} else {
