@@ -855,7 +855,7 @@ function getPabellon(request, response) {
 }
 
 /* Equipo medico */
-/*function getEquipoMedico(request, response) {
+function getEquipoMedico(request, response) {
 	try {
 		var connection = mysql.createConnection({
 			host: global.config.ds_ceola2017.server,
@@ -885,7 +885,7 @@ function getPabellon(request, response) {
 	}
 }
 
-function newFuncionarioEM(request, response) {
+/*function newFuncionarioEM(request, response) {
 	try {
 		var connection = mysql.createConnection({
 			host: global.config.ds_ceola2017.server,
@@ -1037,9 +1037,9 @@ module.exports = {
 	newPabellon,
 	deletePabellon,
 	updatePabellon,
-	getPabellon
-	/*getEquipoMedico,
-	newFuncionarioEM,
+	getPabellon,
+	getEquipoMedico
+	/*newFuncionarioEM,
 	deleteFuncionarioEM,
 	updateFuncionarioEM,
 	getFuncionarioEM*/

@@ -1,49 +1,49 @@
 'use strict'
 
 var express = require('express');
-var presupuestoService = require('../services/parametrico.service');
+var parametricoService = require('../services/parametrico.service');
 
 var router = express.Router();
 
-router.post('/getPrevisiones', presupuestoService.getPrevisiones);
-router.post('/getApp', presupuestoService.getApp);
-router.post('/updateEstadoApp', presupuestoService.updateEstadoApp);
-router.post('/getMenusApp', presupuestoService.getMenusApp);
-router.post('/updateEstadoMenu', presupuestoService.updateEstadoMenu);
+router.post('/getPrevisiones', parametricoService.getPrevisiones);
+router.post('/getApp', parametricoService.getApp);
+router.post('/updateEstadoApp', parametricoService.updateEstadoApp);
+router.post('/getMenusApp', parametricoService.getMenusApp);
+router.post('/updateEstadoMenu', parametricoService.updateEstadoMenu);
 
 /* protesis */
-router.post('/getProtesis', presupuestoService.getProtesis);
-router.post('/newProtesis', pacienteService.newProtesis);
-router.post('/deleteProtesis', pacienteService.deleteProtesis);
-router.post('/updateProtesis', pacienteService.updateProtesis);
-router.post('/getProte', pacienteService.getProte);
+router.post('/getProtesis', parametricoService.getProtesis);
+router.post('/newProtesis', parametricoService.newProtesis);
+router.post('/deleteProtesis', parametricoService.deleteProtesis);
+router.post('/updateProtesis', parametricoService.updateProtesis);
+router.post('/getProte', parametricoService.getProte);
 
 /* insumos */
-router.post('/getInsumos', presupuestoService.getInsumos);
-router.post('/newInsumo', pacienteService.newInsumo);
-router.post('/deleteInsumo', pacienteService.deleteInsumo);
-router.post('/updateInsumo', pacienteService.updateInsumo);
-router.post('/getInsumo', pacienteService.getInsumo);
+router.post('/getInsumos', parametricoService.getInsumos);
+router.post('/newInsumo', parametricoService.newInsumo);
+router.post('/deleteInsumo', parametricoService.deleteInsumo);
+router.post('/updateInsumo', parametricoService.updateInsumo);
+router.post('/getInsumo', parametricoService.getInsumo);
 
 /* medicamentos */
-router.post('/getMedicamentos', presupuestoService.getMedicamentos);
-router.post('/newMedicamento', pacienteService.newMedicamento);
-router.post('/deleteMedicamento', pacienteService.deleteMedicamento);
-router.post('/updateMedicamento', pacienteService.updateMedicamento);
-router.post('/getMedicamento', pacienteService.getMedicamento);
+router.post('/getMedicamentos', parametricoService.getMedicamentos);
+router.post('/newMedicamento', parametricoService.newMedicamento);
+router.post('/deleteMedicamento', parametricoService.deleteMedicamento);
+router.post('/updateMedicamento', parametricoService.updateMedicamento);
+router.post('/getMedicamento', parametricoService.getMedicamento);
 
 /* Pabellón */
-router.post('/getPabellones', presupuestoService.getPabellones);
-router.post('/newPabellon', pacienteService.newPabellon);
-router.post('/deletePabellon', pacienteService.deletePabellon);
-router.post('/updatePabellon', pacienteService.updatePabellon);
-router.post('/getPabellon', pacienteService.getPabellon);
+router.post('/getPabellones', parametricoService.getPabellones);
+router.post('/newPabellon', parametricoService.newPabellon);
+router.post('/deletePabellon', parametricoService.deletePabellon);
+router.post('/updatePabellon', parametricoService.updatePabellon);
+router.post('/getPabellon', parametricoService.getPabellon);
 
 /* Equipo medico */
-router.post('/getEquipoMedico', presupuestoService.getEquipoMedico);
-/*router.post('/newFuncionarioEM', pacienteService.newFuncionarioEM);
-router.post('/deleteFuncionarioEM', pacienteService.deleteFuncionarioEM);
-router.post('/updateFuncionarioEM', pacienteService.updateFuncionarioEM);
-router.post('/getFuncionarioEM', pacienteService.getFuncionarioEM);*/
+router.post('/getEquipoMedico', parametricoService.getEquipoMedico);
+/*router.post('/newFuncionarioEM', parametricoService.newFuncionarioEM);
+router.post('/deleteFuncionarioEM', parametricoService.deleteFuncionarioEM);
+router.post('/updateFuncionarioEM', parametricoService.updateFuncionarioEM);
+router.post('/getFuncionarioEM', parametricoService.getFuncionarioEM);*/
 
 module.exports = router;
