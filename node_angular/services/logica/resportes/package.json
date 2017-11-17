@@ -1,0 +1,26 @@
+{
+  "name": "reportes",
+  "base_version": "1.0.0",
+  "version": "1.0.0",
+  "description": "Servicio Logico: Reportes",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DevSolvers",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "method-override": "^2.3.7",
+    "mssql": "^3.3.0",
+    "dateformat": "^2.0.0",
+    "jsreport": "^1.8.2",
+    "urw-core35-fonts": "^1.0.1",
+    "currency-formatter": "^1.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

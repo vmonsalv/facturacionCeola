@@ -1,0 +1,6 @@
+{
+    "code": "reportes",
+    "host": "192.168.0.100",
+    "port": 2008,
+    "path": "/reportes"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "urlLogica",
+  "base_version": "1.0.0",
+  "version": "1.0.0",
+  "description": "Servicio Logico: urlLogica",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DevSolvers",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "method-override": "^2.3.7",
+    "mssql": "^3.3.0",
+    "dateformat": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

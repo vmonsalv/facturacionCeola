@@ -1,0 +1,8 @@
+{
+    "params": [
+        {"code": "crypter_algorithm", "value": "aes-256-ctr"},
+        {"code": "crypter_password", "value": "c3014"},
+	{"code": "jwt_password", "value": "c3014"},
+        {"code": "jwt_time_expires", "value": 14400}
+    ]
+}

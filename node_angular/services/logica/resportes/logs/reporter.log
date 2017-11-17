@@ -1,0 +1,268 @@
+2017-11-09T20:49:19.264Z - info: Initializing jsreport@1.9.1 in development mode using configuration file: none
+2017-11-09T20:49:19.268Z - info: Setting process based strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2017-11-09T20:49:19.275Z - info: Searching for available extensions in /home/garin/node_angular/services/logica/reportes/
+2017-11-09T20:49:19.284Z - info: Extensions location cache not found, crawling directories
+2017-11-09T20:49:19.964Z - info: Found 30 extensions
+2017-11-09T20:49:20.005Z - debug: Writing extension locations cache to /tmp/jsreport/core/locations.json
+2017-11-09T20:49:20.007Z - debug: Discovered 30 extensions
+2017-11-09T20:49:20.013Z - info: Using extension jsrender
+2017-11-09T20:49:20.017Z - info: Using extension fop-pdf
+2017-11-09T20:49:20.140Z - info: Using extension handlebars
+2017-11-09T20:49:20.146Z - info: Using extension templates
+2017-11-09T20:49:20.163Z - info: Using extension html-to-xlsx
+2017-11-09T20:49:20.374Z - info: Using extension data
+2017-11-09T20:49:20.377Z - info: Using extension phantom-pdf
+2017-11-09T20:49:20.534Z - info: Using extension text
+2017-11-09T20:49:20.537Z - info: Using extension assets
+2017-11-09T20:49:20.593Z - info: Using extension scripts
+2017-11-09T20:49:20.599Z - info: Using extension xlsx
+2017-11-09T20:49:21.447Z - info: Creating memory store
+2017-11-09T20:49:21.519Z - info: reporter initialized
+2017-11-09T20:49:21.525Z - info: Starting rendering request 1 (user: null) requestId=1
+2017-11-09T20:49:21.527Z - info: Rendering anonymous template { recipe:phantom-pdf,engine:jsrender} requestId=1
+2017-11-09T20:49:21.529Z - debug: Data item not defined for this template. requestId=1
+2017-11-09T20:49:21.547Z - debug: Rendering engine jsrender requestId=1
+2017-11-09T20:49:21.936Z - debug: Compiled template not found in the cache, compiling timestamp=Thu Nov 09 2017 17:49:21 GMT-0300 (-03), requestId=1
+2017-11-09T20:49:21.950Z - debug: Executing recipe phantom-pdf requestId=1
+2017-11-09T20:49:21.952Z - debug: Starting child request to render pdf header requestId=1
+2017-11-09T20:49:21.956Z - info: Starting rendering request 2 (user: null) requestId=2
+2017-11-09T20:49:21.958Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=2
+2017-11-09T20:49:21.960Z - debug: Inline data specified. requestId=2
+2017-11-09T20:49:21.968Z - debug: Rendering engine jsrender requestId=2
+2017-11-09T20:49:22.346Z - debug: Compiled template not found in the cache, compiling timestamp=Thu Nov 09 2017 17:49:22 GMT-0300 (-03), requestId=2
+2017-11-09T20:49:22.354Z - debug: Executing recipe html requestId=2
+2017-11-09T20:49:22.357Z - info: Rendering request 2 finished in 401 ms requestId=2
+2017-11-09T20:49:22.360Z - debug: Starting child request to render pdf footer requestId=1
+2017-11-09T20:49:22.362Z - info: Starting rendering request 3 (user: null) requestId=3
+2017-11-09T20:49:22.364Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=3
+2017-11-09T20:49:22.365Z - debug: Inline data specified. requestId=3
+2017-11-09T20:49:22.371Z - debug: Rendering engine jsrender requestId=3
+2017-11-09T20:49:22.744Z - debug: Compiled template not found in the cache, compiling timestamp=Thu Nov 09 2017 17:49:22 GMT-0300 (-03), requestId=3
+2017-11-09T20:49:22.751Z - debug: Executing recipe html requestId=3
+2017-11-09T20:49:22.756Z - info: Rendering request 3 finished in 393 ms requestId=3
+2017-11-09T20:49:23.670Z - debug: Converting in dedicated phantomjs 1.9.8 timestamp=Thu Nov 09 2017 17:49:23 GMT-0300 (-03), requestId=1
+2017-11-09T20:49:23.671Z - debug: Request file:///%2Ftmp%2Fjsreport%2F771f61b0-c58f-11e7-8177-2786bd83ae5ahtml.html timestamp=Thu Nov 09 2017 17:49:23 GMT-0300 (-03), requestId=1
+2017-11-09T20:49:23.677Z - debug: phantom-pdf recipe finished with 1 pages generated requestId=1
+2017-11-09T20:49:23.685Z - info: Rendering request 1 finished in 2162 ms requestId=1
+2017-11-09T20:49:28.064Z - info: Starting rendering request 4 (user: null) requestId=4
+2017-11-09T20:49:28.067Z - info: Rendering anonymous template { recipe:phantom-pdf,engine:jsrender} requestId=4
+2017-11-09T20:49:28.068Z - debug: Data item not defined for this template. requestId=4
+2017-11-09T20:49:28.076Z - debug: Rendering engine jsrender requestId=4
+2017-11-09T20:49:28.449Z - debug: Compiled template not found in the cache, compiling timestamp=Thu Nov 09 2017 17:49:28 GMT-0300 (-03), requestId=4
+2017-11-09T20:49:28.471Z - debug: Executing recipe phantom-pdf requestId=4
+2017-11-09T20:49:28.473Z - debug: Starting child request to render pdf header requestId=4
+2017-11-09T20:49:28.476Z - info: Starting rendering request 5 (user: null) requestId=5
+2017-11-09T20:49:28.479Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=5
+2017-11-09T20:49:28.480Z - debug: Inline data specified. requestId=5
+2017-11-09T20:49:28.520Z - debug: Rendering engine jsrender requestId=5
+2017-11-09T20:49:28.894Z - debug: Compiled template not found in the cache, compiling timestamp=Thu Nov 09 2017 17:49:28 GMT-0300 (-03), requestId=5
+2017-11-09T20:49:28.897Z - debug: Executing recipe html requestId=5
+2017-11-09T20:49:28.904Z - info: Rendering request 5 finished in 425 ms requestId=5
+2017-11-09T20:49:28.906Z - debug: Starting child request to render pdf footer requestId=4
+2017-11-09T20:49:28.910Z - info: Starting rendering request 6 (user: null) requestId=6
+2017-11-09T20:49:28.912Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=6
+2017-11-09T20:49:28.918Z - debug: Inline data specified. requestId=6
+2017-11-09T20:49:28.931Z - debug: Rendering engine jsrender requestId=6
+2017-11-09T20:49:29.306Z - debug: Compiled template not found in the cache, compiling timestamp=Thu Nov 09 2017 17:49:29 GMT-0300 (-03), requestId=6
+2017-11-09T20:49:29.309Z - debug: Executing recipe html requestId=6
+2017-11-09T20:49:29.313Z - info: Rendering request 6 finished in 402 ms requestId=6
+2017-11-09T20:49:29.677Z - debug: Converting in dedicated phantomjs 1.9.8 timestamp=Thu Nov 09 2017 17:49:29 GMT-0300 (-03), requestId=4
+2017-11-09T20:49:29.678Z - debug: Request file:///%2Ftmp%2Fjsreport%2F7b072330-c58f-11e7-8177-2786bd83ae5ahtml.html timestamp=Thu Nov 09 2017 17:49:29 GMT-0300 (-03), requestId=4
+2017-11-09T20:49:29.681Z - debug: phantom-pdf recipe finished with 1 pages generated requestId=4
+2017-11-09T20:49:29.684Z - info: Rendering request 4 finished in 1620 ms requestId=4
+2017-11-09T20:55:53.578Z - info: Starting rendering request 7 (user: null) requestId=7
+2017-11-09T20:55:53.588Z - info: Rendering anonymous template { recipe:phantom-pdf,engine:jsrender} requestId=7
+2017-11-09T20:55:53.591Z - debug: Data item not defined for this template. requestId=7
+2017-11-09T20:55:53.598Z - debug: Rendering engine jsrender requestId=7
+2017-11-09T20:55:53.973Z - debug: Compiled template not found in the cache, compiling timestamp=Thu Nov 09 2017 17:55:53 GMT-0300 (-03), requestId=7
+2017-11-09T20:55:53.976Z - debug: Executing recipe phantom-pdf requestId=7
+2017-11-09T20:55:53.981Z - debug: Starting child request to render pdf header requestId=7
+2017-11-09T20:55:53.983Z - info: Starting rendering request 8 (user: null) requestId=8
+2017-11-09T20:55:53.985Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=8
+2017-11-09T20:55:53.986Z - debug: Inline data specified. requestId=8
+2017-11-09T20:55:53.993Z - debug: Rendering engine jsrender requestId=8
+2017-11-09T20:55:54.369Z - debug: Compiled template not found in the cache, compiling timestamp=Thu Nov 09 2017 17:55:54 GMT-0300 (-03), requestId=8
+2017-11-09T20:55:54.379Z - debug: Executing recipe html requestId=8
+2017-11-09T20:55:54.384Z - info: Rendering request 8 finished in 401 ms requestId=8
+2017-11-09T20:55:54.386Z - debug: Starting child request to render pdf footer requestId=7
+2017-11-09T20:55:54.387Z - info: Starting rendering request 9 (user: null) requestId=9
+2017-11-09T20:55:54.389Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=9
+2017-11-09T20:55:54.393Z - debug: Inline data specified. requestId=9
+2017-11-09T20:55:54.400Z - debug: Rendering engine jsrender requestId=9
+2017-11-09T20:55:54.779Z - debug: Compiled template not found in the cache, compiling timestamp=Thu Nov 09 2017 17:55:54 GMT-0300 (-03), requestId=9
+2017-11-09T20:55:54.795Z - debug: Executing recipe html requestId=9
+2017-11-09T20:55:54.797Z - info: Rendering request 9 finished in 410 ms requestId=9
+2017-11-09T20:55:55.187Z - debug: Converting in dedicated phantomjs 1.9.8 timestamp=Thu Nov 09 2017 17:55:55 GMT-0300 (-03), requestId=7
+2017-11-09T20:55:55.188Z - debug: Request file:///%2Ftmp%2Fjsreport%2F60cb53f0-c590-11e7-8177-2786bd83ae5ahtml.html timestamp=Thu Nov 09 2017 17:55:55 GMT-0300 (-03), requestId=7
+2017-11-09T20:55:55.191Z - debug: phantom-pdf recipe finished with 1 pages generated requestId=7
+2017-11-09T20:55:55.193Z - info: Rendering request 7 finished in 1616 ms requestId=7
+2017-11-10T23:32:49.718Z - info: Initializing jsreport@1.9.1 in development mode using configuration file: none
+2017-11-10T23:32:49.721Z - info: Setting process based strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2017-11-10T23:32:49.749Z - info: Searching for available extensions in /home/garin/node_angular/services/logica/reportes/
+2017-11-10T23:32:49.826Z - info: Extensions location cache contains up to date information, skipping crawling in /home/garin/node_angular/services/logica/reportes/node_modules/
+2017-11-10T23:32:49.841Z - info: Found 30 extensions
+2017-11-10T23:32:50.036Z - debug: Writing extension locations cache to /tmp/jsreport/core/locations.json
+2017-11-10T23:32:50.041Z - debug: Discovered 30 extensions
+2017-11-10T23:32:50.045Z - info: Using extension jsrender
+2017-11-10T23:32:50.083Z - info: Using extension fop-pdf
+2017-11-10T23:32:50.335Z - info: Using extension handlebars
+2017-11-10T23:32:50.363Z - info: Using extension templates
+2017-11-10T23:32:50.541Z - info: Using extension html-to-xlsx
+2017-11-10T23:32:51.461Z - info: Using extension data
+2017-11-10T23:32:51.479Z - info: Using extension phantom-pdf
+2017-11-10T23:32:51.898Z - info: Using extension text
+2017-11-10T23:32:51.904Z - info: Using extension assets
+2017-11-10T23:32:52.103Z - info: Using extension scripts
+2017-11-10T23:32:52.129Z - info: Using extension xlsx
+2017-11-10T23:32:55.957Z - info: Creating memory store
+2017-11-10T23:32:56.022Z - info: reporter initialized
+2017-11-10T23:32:56.027Z - info: Starting rendering request 1 (user: null) requestId=1
+2017-11-10T23:32:56.030Z - info: Rendering anonymous template { recipe:phantom-pdf,engine:jsrender} requestId=1
+2017-11-10T23:32:56.032Z - debug: Data item not defined for this template. requestId=1
+2017-11-10T23:32:56.048Z - debug: Rendering engine jsrender requestId=1
+2017-11-10T23:32:56.825Z - debug: Compiled template not found in the cache, compiling timestamp=Fri Nov 10 2017 20:32:56 GMT-0300 (-03), requestId=1
+2017-11-10T23:32:56.836Z - debug: Executing recipe phantom-pdf requestId=1
+2017-11-10T23:32:56.840Z - debug: Starting child request to render pdf header requestId=1
+2017-11-10T23:32:56.844Z - info: Starting rendering request 2 (user: null) requestId=2
+2017-11-10T23:32:56.851Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=2
+2017-11-10T23:32:56.852Z - debug: Inline data specified. requestId=2
+2017-11-10T23:32:56.860Z - debug: Rendering engine jsrender requestId=2
+2017-11-10T23:32:57.230Z - debug: Compiled template not found in the cache, compiling timestamp=Fri Nov 10 2017 20:32:57 GMT-0300 (-03), requestId=2
+2017-11-10T23:32:57.237Z - debug: Executing recipe html requestId=2
+2017-11-10T23:32:57.241Z - info: Rendering request 2 finished in 397 ms requestId=2
+2017-11-10T23:32:57.245Z - debug: Starting child request to render pdf footer requestId=1
+2017-11-10T23:32:57.246Z - info: Starting rendering request 3 (user: null) requestId=3
+2017-11-10T23:32:57.248Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=3
+2017-11-10T23:32:57.249Z - debug: Inline data specified. requestId=3
+2017-11-10T23:32:57.256Z - debug: Rendering engine jsrender requestId=3
+2017-11-10T23:32:57.623Z - debug: Compiled template not found in the cache, compiling timestamp=Fri Nov 10 2017 20:32:57 GMT-0300 (-03), requestId=3
+2017-11-10T23:32:57.627Z - debug: Executing recipe html requestId=3
+2017-11-10T23:32:57.633Z - info: Rendering request 3 finished in 386 ms requestId=3
+2017-11-10T23:33:00.258Z - debug: Converting in dedicated phantomjs 1.9.8 timestamp=Fri Nov 10 2017 20:32:59 GMT-0300 (-03), requestId=1
+2017-11-10T23:33:00.259Z - debug: Request file:///%2Ftmp%2Fjsreport%2F7ba85b70-c66f-11e7-ba67-71274a79c71dhtml.html timestamp=Fri Nov 10 2017 20:32:59 GMT-0300 (-03), requestId=1
+2017-11-10T23:33:00.265Z - debug: phantom-pdf recipe finished with 1 pages generated requestId=1
+2017-11-10T23:33:00.279Z - info: Rendering request 1 finished in 4247 ms requestId=1
+2017-11-10T23:33:11.797Z - info: Starting rendering request 4 (user: null) requestId=4
+2017-11-10T23:33:11.799Z - info: Rendering anonymous template { recipe:phantom-pdf,engine:jsrender} requestId=4
+2017-11-10T23:33:11.800Z - debug: Data item not defined for this template. requestId=4
+2017-11-10T23:33:11.807Z - debug: Rendering engine jsrender requestId=4
+2017-11-10T23:33:12.176Z - debug: Compiled template not found in the cache, compiling timestamp=Fri Nov 10 2017 20:33:12 GMT-0300 (-03), requestId=4
+2017-11-10T23:33:12.179Z - debug: Executing recipe phantom-pdf requestId=4
+2017-11-10T23:33:12.184Z - debug: Starting child request to render pdf header requestId=4
+2017-11-10T23:33:12.187Z - info: Starting rendering request 5 (user: null) requestId=5
+2017-11-10T23:33:12.190Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=5
+2017-11-10T23:33:12.191Z - debug: Inline data specified. requestId=5
+2017-11-10T23:33:12.205Z - debug: Rendering engine jsrender requestId=5
+2017-11-10T23:33:12.574Z - debug: Compiled template not found in the cache, compiling timestamp=Fri Nov 10 2017 20:33:12 GMT-0300 (-03), requestId=5
+2017-11-10T23:33:12.577Z - debug: Executing recipe html requestId=5
+2017-11-10T23:33:12.582Z - info: Rendering request 5 finished in 393 ms requestId=5
+2017-11-10T23:33:12.586Z - debug: Starting child request to render pdf footer requestId=4
+2017-11-10T23:33:12.588Z - info: Starting rendering request 6 (user: null) requestId=6
+2017-11-10T23:33:12.589Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=6
+2017-11-10T23:33:12.596Z - debug: Inline data specified. requestId=6
+2017-11-10T23:33:12.608Z - debug: Rendering engine jsrender requestId=6
+2017-11-10T23:33:12.977Z - debug: Compiled template not found in the cache, compiling timestamp=Fri Nov 10 2017 20:33:12 GMT-0300 (-03), requestId=6
+2017-11-10T23:33:12.983Z - debug: Executing recipe html requestId=6
+2017-11-10T23:33:12.985Z - info: Rendering request 6 finished in 397 ms requestId=6
+2017-11-10T23:33:13.370Z - debug: Converting in dedicated phantomjs 1.9.8 timestamp=Fri Nov 10 2017 20:33:13 GMT-0300 (-03), requestId=4
+2017-11-10T23:33:13.371Z - debug: Request file:///%2Ftmp%2Fjsreport%2F84ce1fa0-c66f-11e7-ba67-71274a79c71dhtml.html timestamp=Fri Nov 10 2017 20:33:13 GMT-0300 (-03), requestId=4
+2017-11-10T23:33:13.374Z - debug: phantom-pdf recipe finished with 1 pages generated requestId=4
+2017-11-10T23:33:13.377Z - info: Rendering request 4 finished in 1580 ms requestId=4
+2017-11-13T08:56:05.209Z - info: Initializing jsreport@1.9.1 in development mode using configuration file: none
+2017-11-13T08:56:05.212Z - info: Setting process based strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2017-11-13T08:56:05.262Z - info: Searching for available extensions in /home/garin/node_angular/services/logica/reportes/
+2017-11-13T08:56:05.318Z - info: Extensions location cache contains up to date information, skipping crawling in /home/garin/node_angular/services/logica/reportes/node_modules/
+2017-11-13T08:56:05.360Z - info: Found 30 extensions
+2017-11-13T08:56:05.567Z - debug: Writing extension locations cache to /tmp/jsreport/core/locations.json
+2017-11-13T08:56:05.571Z - debug: Discovered 30 extensions
+2017-11-13T08:56:05.576Z - info: Using extension jsrender
+2017-11-13T08:56:05.618Z - info: Using extension fop-pdf
+2017-11-13T08:56:05.913Z - info: Using extension handlebars
+2017-11-13T08:56:05.943Z - info: Using extension templates
+2017-11-13T08:56:06.153Z - info: Using extension html-to-xlsx
+2017-11-13T08:56:07.231Z - info: Using extension data
+2017-11-13T08:56:07.255Z - info: Using extension phantom-pdf
+2017-11-13T08:56:07.665Z - info: Using extension text
+2017-11-13T08:56:07.683Z - info: Using extension assets
+2017-11-13T08:56:07.915Z - info: Using extension scripts
+2017-11-13T08:56:07.940Z - info: Using extension xlsx
+2017-11-13T08:56:12.312Z - info: Creating memory store
+2017-11-13T08:56:12.378Z - info: reporter initialized
+2017-11-13T08:56:12.383Z - info: Starting rendering request 1 (user: null) requestId=1
+2017-11-13T08:56:12.386Z - info: Rendering anonymous template { recipe:phantom-pdf,engine:jsrender} requestId=1
+2017-11-13T08:56:12.388Z - debug: Data item not defined for this template. requestId=1
+2017-11-13T08:56:12.404Z - debug: Rendering engine jsrender requestId=1
+2017-11-13T08:56:13.198Z - debug: Compiled template not found in the cache, compiling timestamp=Mon Nov 13 2017 05:56:13 GMT-0300 (-03), requestId=1
+2017-11-13T08:56:13.209Z - debug: Executing recipe phantom-pdf requestId=1
+2017-11-13T08:56:13.212Z - debug: Starting child request to render pdf header requestId=1
+2017-11-13T08:56:13.216Z - info: Starting rendering request 2 (user: null) requestId=2
+2017-11-13T08:56:13.218Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=2
+2017-11-13T08:56:13.219Z - debug: Inline data specified. requestId=2
+2017-11-13T08:56:13.227Z - debug: Rendering engine jsrender requestId=2
+2017-11-13T08:56:13.599Z - debug: Compiled template not found in the cache, compiling timestamp=Mon Nov 13 2017 05:56:13 GMT-0300 (-03), requestId=2
+2017-11-13T08:56:13.607Z - debug: Executing recipe html requestId=2
+2017-11-13T08:56:13.611Z - info: Rendering request 2 finished in 395 ms requestId=2
+2017-11-13T08:56:13.615Z - debug: Starting child request to render pdf footer requestId=1
+2017-11-13T08:56:13.617Z - info: Starting rendering request 3 (user: null) requestId=3
+2017-11-13T08:56:13.618Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=3
+2017-11-13T08:56:13.620Z - debug: Inline data specified. requestId=3
+2017-11-13T08:56:13.626Z - debug: Rendering engine jsrender requestId=3
+2017-11-13T08:56:13.996Z - debug: Compiled template not found in the cache, compiling timestamp=Mon Nov 13 2017 05:56:13 GMT-0300 (-03), requestId=3
+2017-11-13T08:56:13.999Z - debug: Executing recipe html requestId=3
+2017-11-13T08:56:14.005Z - info: Rendering request 3 finished in 388 ms requestId=3
+2017-11-13T08:56:16.624Z - debug: Converting in dedicated phantomjs 1.9.8 timestamp=Mon Nov 13 2017 05:56:16 GMT-0300 (-03), requestId=1
+2017-11-13T08:56:16.626Z - debug: Request file:///%2Ftmp%2Fjsreport%2F80b11fc0-c850-11e7-b662-4f52f977ea4fhtml.html timestamp=Mon Nov 13 2017 05:56:16 GMT-0300 (-03), requestId=1
+2017-11-13T08:56:16.632Z - debug: phantom-pdf recipe finished with 1 pages generated requestId=1
+2017-11-13T08:56:16.640Z - info: Rendering request 1 finished in 4258 ms requestId=1
+2017-11-13T08:58:04.402Z - info: Starting rendering request 4 (user: null) requestId=4
+2017-11-13T08:58:04.404Z - info: Rendering anonymous template { recipe:phantom-pdf,engine:jsrender} requestId=4
+2017-11-13T08:58:04.406Z - debug: Data item not defined for this template. requestId=4
+2017-11-13T08:58:04.418Z - debug: Rendering engine jsrender requestId=4
+2017-11-13T08:58:04.791Z - debug: Compiled template not found in the cache, compiling timestamp=Mon Nov 13 2017 05:58:04 GMT-0300 (-03), requestId=4
+2017-11-13T08:58:04.794Z - debug: Executing recipe phantom-pdf requestId=4
+2017-11-13T08:58:04.799Z - debug: Starting child request to render pdf header requestId=4
+2017-11-13T08:58:04.803Z - info: Starting rendering request 5 (user: null) requestId=5
+2017-11-13T08:58:04.806Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=5
+2017-11-13T08:58:04.808Z - debug: Inline data specified. requestId=5
+2017-11-13T08:58:04.822Z - debug: Rendering engine jsrender requestId=5
+2017-11-13T08:58:05.194Z - debug: Compiled template not found in the cache, compiling timestamp=Mon Nov 13 2017 05:58:05 GMT-0300 (-03), requestId=5
+2017-11-13T08:58:05.200Z - debug: Executing recipe html requestId=5
+2017-11-13T08:58:05.205Z - info: Rendering request 5 finished in 403 ms requestId=5
+2017-11-13T08:58:05.208Z - debug: Starting child request to render pdf footer requestId=4
+2017-11-13T08:58:05.209Z - info: Starting rendering request 6 (user: null) requestId=6
+2017-11-13T08:58:05.211Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=6
+2017-11-13T08:58:05.217Z - debug: Inline data specified. requestId=6
+2017-11-13T08:58:05.228Z - debug: Rendering engine jsrender requestId=6
+2017-11-13T08:58:05.603Z - debug: Compiled template not found in the cache, compiling timestamp=Mon Nov 13 2017 05:58:05 GMT-0300 (-03), requestId=6
+2017-11-13T08:58:05.606Z - debug: Executing recipe html requestId=6
+2017-11-13T08:58:05.613Z - info: Rendering request 6 finished in 399 ms requestId=6
+2017-11-13T08:58:05.998Z - debug: Converting in dedicated phantomjs 1.9.8 timestamp=Mon Nov 13 2017 05:58:05 GMT-0300 (-03), requestId=4
+2017-11-13T08:58:06.000Z - debug: Request file:///%2Ftmp%2Fjsreport%2Fc33663f0-c850-11e7-b662-4f52f977ea4fhtml.html timestamp=Mon Nov 13 2017 05:58:05 GMT-0300 (-03), requestId=4
+2017-11-13T08:58:06.003Z - debug: phantom-pdf recipe finished with 1 pages generated requestId=4
+2017-11-13T08:58:06.006Z - info: Rendering request 4 finished in 1604 ms requestId=4
+2017-11-13T08:58:14.452Z - info: Starting rendering request 7 (user: null) requestId=7
+2017-11-13T08:58:14.464Z - info: Rendering anonymous template { recipe:phantom-pdf,engine:jsrender} requestId=7
+2017-11-13T08:58:14.466Z - debug: Data item not defined for this template. requestId=7
+2017-11-13T08:58:14.472Z - debug: Rendering engine jsrender requestId=7
+2017-11-13T08:58:14.843Z - debug: Compiled template not found in the cache, compiling timestamp=Mon Nov 13 2017 05:58:14 GMT-0300 (-03), requestId=7
+2017-11-13T08:58:14.845Z - debug: Executing recipe phantom-pdf requestId=7
+2017-11-13T08:58:14.850Z - debug: Starting child request to render pdf header requestId=7
+2017-11-13T08:58:14.852Z - info: Starting rendering request 8 (user: null) requestId=8
+2017-11-13T08:58:14.854Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=8
+2017-11-13T08:58:14.855Z - debug: Inline data specified. requestId=8
+2017-11-13T08:58:14.864Z - debug: Rendering engine jsrender requestId=8
+2017-11-13T08:58:15.236Z - debug: Compiled template not found in the cache, compiling timestamp=Mon Nov 13 2017 05:58:15 GMT-0300 (-03), requestId=8
+2017-11-13T08:58:15.245Z - debug: Executing recipe html requestId=8
+2017-11-13T08:58:15.249Z - info: Rendering request 8 finished in 397 ms requestId=8
+2017-11-13T08:58:15.252Z - debug: Starting child request to render pdf footer requestId=7
+2017-11-13T08:58:15.254Z - info: Starting rendering request 9 (user: null) requestId=9
+2017-11-13T08:58:15.256Z - info: Rendering anonymous template { recipe:html,engine:jsrender} requestId=9
+2017-11-13T08:58:15.257Z - debug: Inline data specified. requestId=9
+2017-11-13T08:58:15.268Z - debug: Rendering engine jsrender requestId=9
+2017-11-13T08:58:15.638Z - debug: Compiled template not found in the cache, compiling timestamp=Mon Nov 13 2017 05:58:15 GMT-0300 (-03), requestId=9
+2017-11-13T08:58:15.653Z - debug: Executing recipe html requestId=9
+2017-11-13T08:58:15.654Z - info: Rendering request 9 finished in 401 ms requestId=9
+2017-11-13T08:58:16.045Z - debug: Converting in dedicated phantomjs 1.9.8 timestamp=Mon Nov 13 2017 05:58:15 GMT-0300 (-03), requestId=7
+2017-11-13T08:58:16.047Z - debug: Request file:///%2Ftmp%2Fjsreport%2Fc93349d0-c850-11e7-b662-4f52f977ea4fhtml.html timestamp=Mon Nov 13 2017 05:58:15 GMT-0300 (-03), requestId=7
+2017-11-13T08:58:16.050Z - debug: phantom-pdf recipe finished with 1 pages generated requestId=7
+2017-11-13T08:58:16.051Z - info: Rendering request 7 finished in 1605 ms requestId=7
