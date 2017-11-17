@@ -1,8 +1,0 @@
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <div class="panel-title">{{bodyTitle}}</div>
-    </div>
-    <div class="panel-body {{menuActive == 'home' ? 'bodyStyle' : ''}}">
-        <dynamic-component [componentData]="componentData" (navigation)='onNavigate($event)' (error)='errorEmitter($event)'></dynamic-component>
-    </div>
-</div>
